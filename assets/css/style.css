@@ -1,11 +1,30 @@
 body {
-    background-image: url("..css/assets/images/star-wars-background.jpg");
+    background-image: url("../images/star-wars-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    color: gold;
+}
+
+h1 {
+    color: black;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    color: white;
 }
 
 .character-image {
     float: left;
     text-align: center;
     width: 24.8%;
-    border: solid 2px;
+    border: solid 2px teal;
     margin: 1px;
 }
+
