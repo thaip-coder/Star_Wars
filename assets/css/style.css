@@ -20,6 +20,10 @@ h3 {
     color: white;
 }
 
+.hp {
+    color: greenyellow;
+}
+
 .character-image {
     float: left;
     text-align: center;

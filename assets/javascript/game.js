@@ -1,13 +1,12 @@
 //Variables
-var characters = {};
-var defenders = {};
+var character = {};
+var defender = {};
 var characterPicked = false;
 var defenderPicked = false;
 var defeated = 0;
 var gameOver = false;
 
 //Characters
-
 var obiWanKenobi = {
     name: "Obi-Wan Kenobi",
     health: 120,
@@ -41,3 +40,18 @@ var darthMaul = {
 };
 
 //Functions
+function characterSelect(characterPicked) {
+    character.name = characterPicked.name;
+    character.health = characterPicked.health;
+    character.attack = characterPicked.attack;
+    character.baseAttack = characterPicked.baseAttack;
+    character.counterAttack = characterPicked.counterAttack;
+}
+
+function defenderSelect(defenderPicked) {
+    defender.name = defenderPicked.name;
+    defender.health = defenderPicked.health;
+    defender.attack = defenderPicked.attack;
+    defender.baseAttack = defenderPicked.baseAttack;
+    defender.counterAttack = defenderPicked.counterAttack;
+}
