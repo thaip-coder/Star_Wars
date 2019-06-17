@@ -1,0 +1,11 @@
+body {
+    background-image: url("..css/assets/images/star-wars-background.jpg");
+}
+
+.character-image {
+    float: left;
+    text-align: center;
+    width: 24.8%;
+    border: solid 2px;
+    margin: 1px;
+}
