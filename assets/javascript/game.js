@@ -55,3 +55,10 @@ function defenderSelect(defenderPicked) {
     defender.baseAttack = defenderPicked.baseAttack;
     defender.counterAttack = defenderPicked.counterAttack;
 }
+
+function toDefenders() {
+    $(".character-choice").addClass(".enemy-now").removeClass(".character-choice");
+    $("#enemies").append($(".enemy-now"));
+}
+
+//Processes
