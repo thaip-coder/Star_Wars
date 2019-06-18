@@ -58,7 +58,7 @@ function defenderSelect(defenderPicked) {
 
 function yourCharacter(characterPicked) {
     $(characterPicked).addClass("chosenOne").removeClass("character-choice");
-    $("#your-character").append($(characterPicked));
+    $("#your-character").append($(".chosenOne"));
 }
 
 function toDefender() {
@@ -73,6 +73,26 @@ $(document).ready(function() {
         yourCharacter(this);
         characterSelect(obiWanKenobi);
         $("#enemy-characters").append($(".character-choice"));
+        $(".character-choice").removeClass("character-choice").addClass("enemy-now");
     });
 
 });
+
+
+/* $("#luke-skywalker").click(function() {
+    yourCharacter(this);
+    characterSelect(lukeSkywalker);
+    $("#enemy-characters").append($(".character-choice"));
+});
+
+$("#darth-sidious").click(function() {
+    yourCharacter(this);
+    characterSelect(darthSidious);
+    $("#enemy-characters").append($(".character-choice"));
+});
+
+$("#darth-maul").click(function() {
+    yourCharacter(this);
+    characterSelect(darthMaul);
+    $("#enemy-characters").append($(".character-choice"));
+}); */
