@@ -1,4 +1,4 @@
-//Variables
+//Starting Variables
 var character = {};
 var defender = {};
 var characterPicked = false;
@@ -40,12 +40,22 @@ var darthMaul = {
 };
 
 //Functions
+function yourCharacter() {
+    $(".character-choice").addClass(".chosenOne").removeClass(".character-choice");
+    $("#your-character").append($(".chosenOne"));
+}
+
 function characterSelect(characterPicked) {
     character.name = characterPicked.name;
     character.health = characterPicked.health;
     character.attack = characterPicked.attack;
     character.baseAttack = characterPicked.baseAttack;
     character.counterAttack = characterPicked.counterAttack;
+}
+
+function toDefender() {
+    $(".character-choice").addClass(".enemy-now").removeClass(".character-choice");
+    $("#defender").append($(".enemy-now"));
 }
 
 function defenderSelect(defenderPicked) {
@@ -56,12 +66,13 @@ function defenderSelect(defenderPicked) {
     defender.counterAttack = defenderPicked.counterAttack;
 }
 
-function toDefenders() {
-    $(".character-choice").addClass(".enemy-now").removeClass(".character-choice");
-    $("#enemies").append($(".enemy-now"));
-}
-
 //Processes
-$(document).ready(function() {
-    
-};
+$(document).ready(function() {  
+
+    $("#obi-wan-kenobi").click(function() {
+        characterSelect(obiWankenobi);
+        yourCharacter(obiWanKenobi);
+        $("#enemy-characters").append(".character-choice");
+    });
+
+});
