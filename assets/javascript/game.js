@@ -62,3 +62,6 @@ function toDefenders() {
 }
 
 //Processes
+$(document).ready(function() {
+    
+};
