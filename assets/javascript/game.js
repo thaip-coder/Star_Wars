@@ -4,7 +4,7 @@ var defender = {};
 var characterPicked = false;
 var defenderPicked = false;
 var defeated = 0;
-var gameOver = false;
+var gg = false;
 
 //Characters
 var obiWanKenobi = {
@@ -40,22 +40,12 @@ var darthMaul = {
 };
 
 //Functions
-function yourCharacter() {
-    $(".character-choice").addClass(".chosenOne").removeClass(".character-choice");
-    $("#your-character").append($(".chosenOne"));
-}
-
 function characterSelect(characterPicked) {
     character.name = characterPicked.name;
     character.health = characterPicked.health;
     character.attack = characterPicked.attack;
     character.baseAttack = characterPicked.baseAttack;
     character.counterAttack = characterPicked.counterAttack;
-}
-
-function toDefender() {
-    $(".character-choice").addClass(".enemy-now").removeClass(".character-choice");
-    $("#defender").append($(".enemy-now"));
 }
 
 function defenderSelect(defenderPicked) {
@@ -66,13 +56,23 @@ function defenderSelect(defenderPicked) {
     defender.counterAttack = defenderPicked.counterAttack;
 }
 
-//Processes
+function yourCharacter() {
+    $(".character-choice").addClass(".chosenOne").removeClass(".character-choice");
+    $("#your-character").append($(".chosenOne"));
+}
+
+function toDefender() {
+    $(".character-choice").addClass(".defender-now").removeClass(".character-choice");
+    $("#defender").append($(".defender-now"));
+}
+
+//Processing
 $(document).ready(function() {  
 
     $("#obi-wan-kenobi").click(function() {
-        characterSelect(obiWankenobi);
-        yourCharacter(obiWanKenobi);
-        $("#enemy-characters").append(".character-choice");
+        characterSelect(obiWanKenobi);
+        yourCharacter();
+        $("#enemy-characters").append($(".character-choice"));
     });
 
 });
