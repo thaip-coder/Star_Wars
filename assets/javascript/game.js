@@ -56,13 +56,13 @@ function defenderSelect(defenderPicked) {
     defender.counterAttack = defenderPicked.counterAttack;
 }
 
-function yourCharacter() {
-    $(".character-choice").addClass(".chosenOne").removeClass(".character-choice");
-    $("#your-character").append($(".chosenOne"));
+function yourCharacter(characterPicked) {
+    $(characterPicked).addClass("chosenOne").removeClass("character-choice");
+    $("#your-character").append($(characterPicked));
 }
 
 function toDefender() {
-    $(".character-choice").addClass(".defender-now").removeClass(".character-choice");
+    $(".character-choice").addClass("defender-now").removeClass("character-choice");
     $("#defender").append($(".defender-now"));
 }
 
@@ -70,8 +70,8 @@ function toDefender() {
 $(document).ready(function() {  
 
     $("#obi-wan-kenobi").click(function() {
+        yourCharacter(this);
         characterSelect(obiWanKenobi);
-        yourCharacter(obiWanKenobi);
         $("#enemy-characters").append($(".character-choice"));
     });
 
