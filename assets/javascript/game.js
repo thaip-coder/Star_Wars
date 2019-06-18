@@ -71,7 +71,7 @@ $(document).ready(function() {
 
     $("#obi-wan-kenobi").click(function() {
         characterSelect(obiWanKenobi);
-        yourCharacter();
+        yourCharacter(obiWanKenobi);
         $("#enemy-characters").append($(".character-choice"));
     });
 
