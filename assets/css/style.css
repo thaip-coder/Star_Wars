@@ -40,6 +40,18 @@ h3 {
     margin: 1px;
 }
 
+.chosen-one {
+    border: double 6px blue;
+}
+
+.enemy-now {
+    border: solid 2px red;
+}
+
+.defender-now {
+    border: double 6px red;
+}
+
 #restart {
     margin-bottom: 20px;
     margin-top: 20px;
