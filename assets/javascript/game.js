@@ -66,15 +66,47 @@ function toDefender() {
     $("#defender").append($(".defender-now"));
 }
 
+function toEnemies() {
+    $("#enemy-characters").append($(".character-choice"));
+    $(".character-choice").removeClass("character-choice").addClass("enemy-now");
+}
+
 //Processing
 $(document).ready(function() {  
 
+    //Selects Obi-Wan Kenobi
     $("#obi-wan-kenobi").click(function() {
         yourCharacter(this);
         characterSelect(obiWanKenobi);
-        $("#enemy-characters").append($(".character-choice"));
-        $(".character-choice").removeClass("character-choice").addClass("enemy-now");
+        characterPicked = true;
+        toEnemies();
+
+        if((characterPicked == true) && (defenderPicked == false)) {
+            if($("#obi-wan-kenobi").hasClass("enemy-now")) {
+                defenderSelect(obiWanKenobi);
+                defenderPicked = true;
+                toDefender(this);
+            }
+        }
+    }); 
+
+    //Selects Luke Skywalker
+    $("#luke-skywalker").click(function() {
+        if(characterPicked == false) {
+            yourCharacter(this);
+            characterSelect(lukeSkywalker);
+            characterPicked = true;
+            toEnemies();
+
+        } else if((characterPicked == true) && (defenderPicked == false)) {
+            if($("#luke-skywalker").hasClass("enemy-now")){
+                defenderSelect(lukeSkywalker);
+                defenderPicked = true;
+                toDefender();
+            }
+        }    
     });
+    
 
 });
 
