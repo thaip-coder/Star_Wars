@@ -56,19 +56,19 @@ function defenderSelect(defenderPicked) {
     defender.counterAttack = defenderPicked.counterAttack;
 }
 
-function yourCharacter(characterPicked) {
-    $(characterPicked).addClass("chosenOne").removeClass("character-choice");
-    $("#your-character").append($(".chosenOne"));
+function toChosen(characterPicked) {
+    $(characterPicked).addClass("chosen-one").removeClass("character-choice");
+    $("#your-character").append($(".chosen-one"));
 }
 
-function toDefender() {
-    $(".character-choice").addClass("defender-now").removeClass("character-choice");
+function toDefender(defenderPicked) {
+    $(defenderPicked).addClass("defender-now").removeClass("character-choice");
     $("#defender").append($(".defender-now"));
 }
 
 function toEnemies() {
-    $("#enemy-characters").append($(".character-choice"));
     $(".character-choice").removeClass("character-choice").addClass("enemy-now");
+    $("#enemy-characters").append($(".enemy-now"));
 }
 
 //Processing
@@ -76,16 +76,17 @@ $(document).ready(function() {
 
     //Selects Obi-Wan Kenobi
     $("#obi-wan-kenobi").click(function() {
-        yourCharacter(this);
-        characterSelect(obiWanKenobi);
-        characterPicked = true;
-        toEnemies();
+        if(characterPicked == false) {
+            toChosen(this);
+            characterSelect(obiWanKenobi);
+            characterPicked = true;
+            toEnemies();
 
-        if((characterPicked == true) && (defenderPicked == false)) {
+        }else if((characterPicked == true) && (defenderPicked == false)) {
             if($("#obi-wan-kenobi").hasClass("enemy-now")) {
+                toDefender(this)
                 defenderSelect(obiWanKenobi);
                 defenderPicked = true;
-                toDefender(this);
             }
         }
     }); 
@@ -93,18 +94,52 @@ $(document).ready(function() {
     //Selects Luke Skywalker
     $("#luke-skywalker").click(function() {
         if(characterPicked == false) {
-            yourCharacter(this);
+            toChosen(this);
             characterSelect(lukeSkywalker);
             characterPicked = true;
             toEnemies();
 
-        } else if((characterPicked == true) && (defenderPicked == false)) {
-            if($("#luke-skywalker").hasClass("enemy-now")){
+        }else if((characterPicked == true) && (defenderPicked == false)) {
+            if($("#luke-skywalker").hasClass("enemy-now")) {
+                toDefender(this);
                 defenderSelect(lukeSkywalker);
                 defenderPicked = true;
-                toDefender();
             }
         }    
+    });
+
+    //Selects Darth Sidious
+    $("#darth-sidious").click(function() {
+        if(characterPicked == false) {
+            toChosen(this);
+            characterSelect(darthSidious);
+            characterPicked = true;
+            toEnemies();
+
+        }else if((characterPicked == true) && (defenderPicked == false)) {
+            if($("#darth-sidious").hasClass("enemy-now")) {
+                toDefender(this);
+                defenderSelect(darthSidious);
+                defenderPicked = true;
+            }
+        }
+    });
+
+    //Selects Darth Maul
+    $("#darth-maul").click(function() {
+        if(characterPicked == false) {
+            toChosen(this);
+            characterSelect(darthMaul);
+            characterPicked = true;
+            toEnemies();
+
+        }else if((characterPicked == true) && (defenderPicked == false)) {
+            if($("#darth-maul").hasClass("enemy-now")) {
+                toDefender(this);
+                defenderSelect(darthMaul);
+                defenderPicked = true;
+            }
+        }
     });
     
 
