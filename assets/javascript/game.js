@@ -24,7 +24,7 @@ var lukeSkywalker = {
 };
 
 var darthSidious = {
-    name: "Darth Sidiious",
+    name: "Darth Sidious",
     health: 150,
     attack: 15,
     baseAttack: 15,
@@ -145,21 +145,3 @@ $(document).ready(function() {
 
 });
 
-
-/* $("#luke-skywalker").click(function() {
-    yourCharacter(this);
-    characterSelect(lukeSkywalker);
-    $("#enemy-characters").append($(".character-choice"));
-});
-
-$("#darth-sidious").click(function() {
-    yourCharacter(this);
-    characterSelect(darthSidious);
-    $("#enemy-characters").append($(".character-choice"));
-});
-
-$("#darth-maul").click(function() {
-    yourCharacter(this);
-    characterSelect(darthMaul);
-    $("#enemy-characters").append($(".character-choice"));
-}); */
