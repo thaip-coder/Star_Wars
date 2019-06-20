@@ -165,16 +165,16 @@ $("#attack").click(function() {
             defeated++;
             $(".defender-now").hide();
             defenderPicked = false;
-            $("#message").html("<p>You have dispatched " + defender.name + " with ease!!</p>")
-            $("#message2").html("<p>Select another enemy to engage, " + character.name + "!!</p>")
+            $("#message").html("<p>You have dispatched " + defender.name + " with ease!!</p>");
+            $("#message2").html("<p>Select another enemy to engage, " + character.name + "!!</p>");
         };
             
         if(character.health > 0) {
             character.attack += character.baseAttack;
         }else if(character.health <= 0) {
             gg = true;
-            $("#message").html("<p>Oh no! You have been slain by " + defender.name + "</p>")
-            $("#message2").html("<p>Do you wish to try again?</p>")
+            $("#message").html("<p>Oh no! You have been slain by " + defender.name + "</p>");
+            $("#message2").html("<p>Do you wish to try again?</p>");
         };
 
         if(defeated == 3) {
