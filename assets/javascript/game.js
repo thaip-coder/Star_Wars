@@ -12,27 +12,31 @@ var obiWanKenobi = {
     health: 120,
     attack: 10,
     baseAttack: 10,
+    counterAttack: 22,
 };
 
 var lukeSkywalker = {
     name: "Luke Skywalker",
     health: 100,
-    attack: 10,
-    baseAttack: 10,
+    attack: 18,
+    baseAttack: 18,
+    counterAttack: 14,
 };
 
 var darthSidious = {
     name: "Darth Sidious",
     health: 150,
-    attack: 15,
-    baseAttack: 15,
+    attack: 7,
+    baseAttack: 7,
+    counterAttack: 18,
 };
 
 var darthMaul = {
     name: "Darth Maul",
     health: 180,
-    attack: 20,
-    baseAttack: 20,
+    attack: 5,
+    baseAttack: 5,
+    counterAttack: 20,
 };
 
 /* ---------- Functions ---------- */
@@ -154,10 +158,10 @@ $("#attack").click(function() {
         $(".defender-now").children(".health").html(defender.health);
         $("#message").html("<p>You attacked " + defender.name + " for " + character.attack + " damage!!</p>");
         if(defender.health > 0) {
-            character.health -= defender.attack;
+            character.health -= defender.counterAttack;
             $(".chosen-one").children(".health").html(character.health);
             $("#message2").html("<p>Oof! " + defender.name + " counter-attacked you for " + defender.attack + " damage.</p>");
-        }else if(defender.health < 0) {
+        }else if(defender.health <= 0) {
             defeated++;
             $(".defender-now").hide();
             defenderPicked = false;
@@ -166,7 +170,7 @@ $("#attack").click(function() {
             
         if(character.health > 0) {
             character.attack = character.attack + character.baseAttack;
-        }else if(character.health < 0) {
+        }else if(character.health <= 0) {
             gg = true;
             $("#message").html("<p>Oh no! You have been slain by " + defender.name + "</p>")
             $("#message2").html("<p>Do you wish to try again?</p>")
