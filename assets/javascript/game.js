@@ -93,8 +93,8 @@ $(document).ready(function() {
                 toDefender(this)
                 defenderSelect(obiWanKenobi);
                 defenderPicked = true;
-            }
-        }
+            };
+        };
     }); 
 
     //Selects Luke Skywalker
@@ -111,8 +111,8 @@ $(document).ready(function() {
                 toDefender(this);
                 defenderSelect(lukeSkywalker);
                 defenderPicked = true;
-            }
-        }    
+            };
+        };
     });
 
     //Selects Darth Sidious
@@ -129,8 +129,8 @@ $(document).ready(function() {
                 toDefender(this);
                 defenderSelect(darthSidious);
                 defenderPicked = true;
-            }
-        }
+            };
+        };
     });
 
     //Selects Darth Maul
@@ -147,8 +147,8 @@ $(document).ready(function() {
                 toDefender(this);
                 defenderSelect(darthMaul);
                 defenderPicked = true;
-            }
-        }
+            };
+        };
     });
     
 /* ---------- Damage Calculations ---------- */
@@ -180,8 +180,8 @@ $("#attack").click(function() {
             gg = true;
             $("#message").html("<p>You have fought valiantly, " + character.name + "!!</p>");
             $("#message2").html("<p>Do you wish to play again?</p>");
-        }
-    }   
+        };
+    };   
 });
 
 });
