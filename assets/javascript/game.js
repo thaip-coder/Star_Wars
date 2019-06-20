@@ -6,7 +6,7 @@ var defenderPicked = false;
 var defeated = 0;
 var gg = false;
 
-/* ---------- Characters ---------- */
+/* ---------- Character Stats ---------- */
 var obiWanKenobi = {
     name: "Obi-Wan Kenobi",
     health: 120,
@@ -76,7 +76,7 @@ function toEnemies() {
     $("#enemy-characters").append($(".enemy-now"));
 };
 
-/* ---------- Processes ---------- */
+/* ---------- Character Clicks ---------- */
 $(document).ready(function() {  
 
     //Selects Obi-Wan Kenobi
@@ -151,6 +151,14 @@ $(document).ready(function() {
         }
     });
     
+/* ---------- Damage Calculations ---------- */
+$("#attack").click(function() {
+    if(characterPicked && defenderPicked && !gg) {
+        defender.health = defender.health - character.attack;
+        $(".defender-now").children(".health").html(defender.health);
+        $("#message").html("<p>You attacked " + defender.name + " for " + character.attack + " damage.</p>");
+    }   
+});
 
 });
 
