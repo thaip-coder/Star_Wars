@@ -123,7 +123,7 @@ $(document).ready(function() {
             characterPicked = true;
             toEnemies();
         
-        //Select Darth Sidious as Defender
+        //Selects Darth Sidious as Defender
         }else if((characterPicked == true) && (defenderPicked == false)) {
             if($("#darth-sidious").hasClass("enemy-now")) {
                 toDefender(this);
