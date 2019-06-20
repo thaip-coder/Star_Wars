@@ -160,13 +160,13 @@ $("#attack").click(function() {
         if(defender.health > 0) {
             character.health -= defender.counterAttack;
             $(".chosen-one").children(".health").html(character.health);
-            $("#message2").html("<p>Oof! " + defender.name + " counter-attacked you for " + defender.attack + " damage.</p>");
+            $("#message2").html("<p>Oof! " + defender.name + " counter-attacked you for " + defender.counterAttack + " damage.</p>");
         }else if(defender.health <= 0) {
             defeated++;
             $(".defender-now").hide();
             defenderPicked = false;
             $("#message").html("<p>You have dispatched " + defender.name + " with ease!!</p>")
-            $("#message2").html("<p>Select another enemy to engage, ") + character.name + "!!</p>"
+            $("#message2").html("<p>Select another enemy to engage, " + character.name + "!!</p>")
         };
             
         if(character.health > 0) {
