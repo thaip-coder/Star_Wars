@@ -18,7 +18,7 @@ var obiWanKenobi = {
 var lukeSkywalker = {
     name: "Luke Skywalker",
     health: 100,
-    attak: 10,
+    attack: 10,
     baseAttack: 10,
     counterAttack: 10,
 };
@@ -76,7 +76,7 @@ function toEnemies() {
     $("#enemy-characters").append($(".enemy-now"));
 };
 
-/* ---------- Character Clicks ---------- */
+/* ---------- Character Selects ---------- */
 $(document).ready(function() {  
 
     //Selects Obi-Wan Kenobi
@@ -156,7 +156,31 @@ $("#attack").click(function() {
     if(characterPicked && defenderPicked && !gg) {
         defender.health = defender.health - character.attack;
         $(".defender-now").children(".health").html(defender.health);
-        $("#message").html("<p>You attacked " + defender.name + " for " + character.attack + " damage.</p>");
+        $("#message").html("<p>You attacked " + defender.name + " for " + character.attack + " damage!!</p>");
+        if(defender.health > 0) {
+            character.health -= defender.attack;
+            $(".chosen-one").children(".health").html(character.health);
+            $("#message2").html("<p>Oof! " + defender.name + " counter-attacked you for " + defender.attack + " damage.</p>");
+        }else if(defender.health < 0) {
+            defeated++;
+            $(".defender-now").hide();
+            defenderPicked = false;
+            $("#message2").html("<p>You have dispatched " + defender.name + " with ease!!</p>")
+        };
+            
+        if(character.health > 0) {
+            character.attack = character.attack + character.baseAttack;
+        }else if(character.health < 0) {
+            gg = true;
+            $("#message").html("<p>Oh no! You have been slain by " + defender.name + "</p>")
+            $("#message2").html("<p>Do you wish to try again?</p>")
+        };
+
+        if(defeated == 3) {
+            gg = true;
+            $("#message").html("<p>You have fought valiantly, " + character.name + "!!</p>");
+            $("#message2").html("<p>Do you wish to play again?</p>");
+        }
     }   
 });
 
