@@ -10,9 +10,8 @@ var gg = false;
 var obiWanKenobi = {
     name: "Obi-Wan Kenobi",
     health: 120,
-    attack: 12,
-    baseAttack: 12,
-    counterAttack: 12,
+    attack: 10,
+    baseAttack: 10,
 };
 
 var lukeSkywalker = {
@@ -20,7 +19,6 @@ var lukeSkywalker = {
     health: 100,
     attack: 10,
     baseAttack: 10,
-    counterAttack: 10,
 };
 
 var darthSidious = {
@@ -28,7 +26,6 @@ var darthSidious = {
     health: 150,
     attack: 15,
     baseAttack: 15,
-    counterAttack: 15,
 };
 
 var darthMaul = {
@@ -36,7 +33,6 @@ var darthMaul = {
     health: 180,
     attack: 20,
     baseAttack: 20,
-    counterAttack: 20,
 };
 
 /* ---------- Functions ---------- */

@@ -56,14 +56,3 @@ h3 {
     margin-bottom: 20px;
     margin-top: 20px;
 }
-
-
-/* Bootstrap Break Points */
-@media (min-width: 576px) { ... }
-
-@media (min-width: 768px) { ... }
-
-@media (min-width: 992px) { ... }
-
-@media (min-width: 1200px) { ... }
-
