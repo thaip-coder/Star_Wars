@@ -154,7 +154,7 @@ $(document).ready(function() {
 /* ---------- Damage Calculations ---------- */
 $("#attack").click(function() {
     if(characterPicked && defenderPicked && !gg) {
-        defender.health = defender.health - character.attack;
+        defender.health -= character.attack;
         $(".defender-now").children(".health").html(defender.health);
         $("#message").html("<p>You attacked " + defender.name + " for " + character.attack + " damage!!</p>");
         if(defender.health > 0) {
@@ -169,7 +169,7 @@ $("#attack").click(function() {
         };
             
         if(character.health > 0) {
-            character.attack = character.attack + character.baseAttack;
+            character.attack += character.baseAttack;
         }else if(character.health <= 0) {
             gg = true;
             $("#message").html("<p>Oh no! You have been slain by " + defender.name + "</p>")
