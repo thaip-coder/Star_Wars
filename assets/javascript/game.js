@@ -165,7 +165,8 @@ $("#attack").click(function() {
             defeated++;
             $(".defender-now").hide();
             defenderPicked = false;
-            $("#message2").html("<p>You have dispatched " + defender.name + " with ease!!</p>")
+            $("#message").html("<p>You have dispatched " + defender.name + " with ease!!</p>")
+            $("#message2").html("<p>Select another enemy to engage, ") + character.name + "!!</p>"
         };
             
         if(character.health > 0) {
