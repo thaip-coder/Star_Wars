@@ -47,7 +47,7 @@ function characterSelect(characterPicked) {
     character.attack = characterPicked.attack;
     character.baseAttack = characterPicked.baseAttack;
     character.counterAttack = characterPicked.counterAttack;
-}
+};
 
 //Translates defender stats to defenderPicked stats
 function defenderSelect(defenderPicked) {
@@ -56,25 +56,25 @@ function defenderSelect(defenderPicked) {
     defender.attack = defenderPicked.attack;
     defender.baseAttack = defenderPicked.baseAttack;
     defender.counterAttack = defenderPicked.counterAttack;
-}
+};
 
 //Selects your Character
 function toChosen(characterPicked) {
     $(characterPicked).addClass("chosen-one").removeClass("character-choice");
     $("#your-character").append($(".chosen-one"));
-}
+};
 
 //Selects your Defender
 function toDefender(defenderPicked) {
     $(defenderPicked).addClass("defender-now").removeClass("character-choice");
     $("#defender").append($(".defender-now"));
-}
+};
 
 //Moves unpicked characters to Enemies section
 function toEnemies() {
     $(".character-choice").removeClass("character-choice").addClass("enemy-now");
     $("#enemy-characters").append($(".enemy-now"));
-}
+};
 
 /* ---------- Processes ---------- */
 $(document).ready(function() {  
