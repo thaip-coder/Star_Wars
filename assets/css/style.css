@@ -22,9 +22,17 @@ h4 {
     color: white;
 }
 
+.name {
+    margin-bottom: 0;
+}
+
 .jumbotron {
     height: 80px;
     vertical-align: middle;
+}
+
+.jumbotron.mb {
+    margin-bottom: 7px;
 }
 
 .health {
@@ -55,4 +63,5 @@ h4 {
 #restart {
     margin-bottom: 20px;
     margin-top: 20px;
+    float: right;
 }

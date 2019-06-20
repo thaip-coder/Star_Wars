@@ -79,6 +79,8 @@ function toEnemies() {
 /* ---------- Character Selects ---------- */
 $(document).ready(function() {  
 
+    $("#restart").hide();
+
     //Selects Obi-Wan Kenobi
     $("#obi-wan-kenobi").click(function() {
         if(characterPicked == false) {
@@ -175,12 +177,15 @@ $("#attack").click(function() {
             gg = true;
             $("#message").html("<p>Oh no! You have been slain by " + defender.name + "</p>");
             $("#message2").html("<p>Do you wish to try again?</p>");
+            $("#restart").text("Try Again");
+            $("#restart").show();
         };
 
         if(defeated == 3) {
             gg = true;
             $("#message").html("<p>You have fought valiantly, " + character.name + "!!</p>");
             $("#message2").html("<p>Do you wish to play again?</p>");
+            $("#restart").show();
         };
     };   
 });
