@@ -72,7 +72,7 @@ function toDefender(defenderPicked) {
 
 //Moves unpicked characters to Enemies section
 function toEnemies() {
-    $(".character-choice").removeClass("character-choice").addClass("enemy-now");
+    $(".character-choice").addClass("enemy-now").removeClass("character-choice");
     $("#enemy-characters").append($(".enemy-now"));
 };
 
