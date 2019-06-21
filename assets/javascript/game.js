@@ -170,7 +170,7 @@ $(document).ready(function() {
         };
     });
     
-/* ---------- Damage Calculations ---------- */
+/* ---------- Battle Code ---------- */
 $("#attack").click(function() {
 
     $('html, body').animate({
