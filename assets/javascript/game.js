@@ -201,6 +201,7 @@ $("#attack").click(function() {
             $("#message2").html("<p>Do you wish to try again?</p>");
             $("#restart").text("Try Again!");
             $("#restart").show();
+            $("#attack").hide();
         };
 
         if(defeated == 3) {
@@ -209,6 +210,7 @@ $("#attack").click(function() {
             $("#message2").html("<p>Do you wish to play again?</p>");
             $(".chosen-one").css("border", "double 6px cyan");
             $("#restart").show();
+            $("#attack").hide();
         };
     };   
 });
