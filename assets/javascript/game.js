@@ -186,6 +186,7 @@ $("#attack").click(function() {
             gg = true;
             $("#message").html("<p><strong>You have fought valiantly! Victory is yours, " + character.name + "!!<strong></p>");
             $("#message2").html("<p>Do you wish to play again?</p>");
+            $(".chosen-one").css("border", "double 6px cyan");
             $("#restart").show();
         };
     };   
