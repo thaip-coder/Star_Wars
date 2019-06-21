@@ -92,6 +92,9 @@ $(document).ready(function() {
         //Selects Obi-Wan Kenobi as Defender
         }else if((characterPicked == true) && (defenderPicked == false)) {
             if($("#obi-wan-kenobi").hasClass("enemy-now")) {
+                $('html, body').animate({
+                    scrollTop: $("#arena").offset().top
+                }, 1000);
                 toDefender(this)
                 defenderSelect(obiWanKenobi);
                 defenderPicked = true;
@@ -110,6 +113,9 @@ $(document).ready(function() {
         //Selects Luke Skywalker as Defender
         }else if((characterPicked == true) && (defenderPicked == false)) {
             if($("#luke-skywalker").hasClass("enemy-now")) {
+                $('html, body').animate({
+                    scrollTop: $("#arena").offset().top
+                }, 1000);
                 toDefender(this);
                 defenderSelect(lukeSkywalker);
                 defenderPicked = true;
@@ -128,6 +134,9 @@ $(document).ready(function() {
         //Selects Darth Sidious as Defender
         }else if((characterPicked == true) && (defenderPicked == false)) {
             if($("#darth-sidious").hasClass("enemy-now")) {
+                $('html, body').animate({
+                    scrollTop: $("#arena").offset().top
+                }, 1000);
                 toDefender(this);
                 defenderSelect(darthSidious);
                 defenderPicked = true;
@@ -146,6 +155,9 @@ $(document).ready(function() {
         //Select Darth Maul as Defender
         }else if((characterPicked == true) && (defenderPicked == false)) {
             if($("#darth-maul").hasClass("enemy-now")) {
+                $('html, body').animate({
+                    scrollTop: $("#arena").offset().top
+                }, 1000);
                 toDefender(this);
                 defenderSelect(darthMaul);
                 defenderPicked = true;
@@ -155,6 +167,10 @@ $(document).ready(function() {
     
 /* ---------- Damage Calculations ---------- */
 $("#attack").click(function() {
+
+    $('html, body').animate({
+        scrollTop: $("#message2").offset().top
+    }, 1000);
     
     if(characterPicked && defenderPicked && !gg) {
         defender.health -= character.attack;
