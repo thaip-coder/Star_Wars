@@ -80,6 +80,7 @@ function toEnemies() {
 $(document).ready(function() {  
 
     $("#restart").hide();
+    $("#attack").hide();
 
     //Selects Obi-Wan Kenobi
     $("#obi-wan-kenobi").click(function() {
@@ -92,6 +93,7 @@ $(document).ready(function() {
         //Selects Obi-Wan Kenobi as Defender
         }else if((characterPicked == true) && (defenderPicked == false)) {
             if($("#obi-wan-kenobi").hasClass("enemy-now")) {
+                $("#attack").show();
                 $('html, body').animate({
                     scrollTop: $("#arena").offset().top
                 }, 1000);
@@ -113,6 +115,7 @@ $(document).ready(function() {
         //Selects Luke Skywalker as Defender
         }else if((characterPicked == true) && (defenderPicked == false)) {
             if($("#luke-skywalker").hasClass("enemy-now")) {
+                $("#attack").show();
                 $('html, body').animate({
                     scrollTop: $("#arena").offset().top
                 }, 1000);
@@ -134,6 +137,7 @@ $(document).ready(function() {
         //Selects Darth Sidious as Defender
         }else if((characterPicked == true) && (defenderPicked == false)) {
             if($("#darth-sidious").hasClass("enemy-now")) {
+                $("#attack").show();
                 $('html, body').animate({
                     scrollTop: $("#arena").offset().top
                 }, 1000);
@@ -155,6 +159,7 @@ $(document).ready(function() {
         //Select Darth Maul as Defender
         }else if((characterPicked == true) && (defenderPicked == false)) {
             if($("#darth-maul").hasClass("enemy-now")) {
+                $("#attack").show();
                 $('html, body').animate({
                     scrollTop: $("#arena").offset().top
                 }, 1000);
