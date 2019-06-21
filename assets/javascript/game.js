@@ -199,6 +199,7 @@ $("#attack").click(function() {
             gg = true;
             $("#message").html("<p>Oh no! You have been slain by " + defender.name + ".</p>");
             $("#message2").html("<p>Do you wish to try again?</p>");
+            $(".chosen-one").hide();
             $("#restart").text("Try Again!");
             $("#restart").show();
             $("#attack").hide();
