@@ -197,7 +197,7 @@ $("#attack").click(function() {
             character.attack += character.baseAttack;
         }else if(character.health <= 0) {
             gg = true;
-            $("#message").html("<p>Oh no! You have been slain by " + defender.name + "</p>");
+            $("#message").html("<p>Oh no! You have been slain by " + defender.name + ".</p>");
             $("#message2").html("<p>Do you wish to try again?</p>");
             $("#restart").text("Try Again!");
             $("#restart").show();
