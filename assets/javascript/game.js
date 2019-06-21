@@ -202,6 +202,7 @@ $("#attack").click(function() {
             $("#restart").text("Try Again!");
             $("#restart").show();
             $("#attack").hide();
+            $(".myh4").hide();
         };
 
         if(defeated == 3) {
@@ -211,6 +212,7 @@ $("#attack").click(function() {
             $(".chosen-one").css("border", "double 6px cyan");
             $("#restart").show();
             $("#attack").hide();
+            $(".myh4").hide();
         };
     };   
 });
